@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nginx-webapp2
+  name: nginx-webapp2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-webapp2
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nginx-webapp2
+    spec:
+      containers:
+      - image: vishwa787/webapp-2
+        name: webapp-2
+        resources: {}
+status: {}

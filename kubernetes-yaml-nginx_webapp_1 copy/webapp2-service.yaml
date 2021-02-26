@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nginx-webapp2-service
+  name: nginx-webapp2-service
+spec:
+  ports:
+  - name: 5679-80
+    port: 5679
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: nginx-webapp2
+  type: NodePort
+status:
+  loadBalancer: {}
